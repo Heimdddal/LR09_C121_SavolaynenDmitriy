@@ -72,11 +72,11 @@ namespace LR09_C121_SavolaynenDmitriy
             GetDates();
             if (DateTime.Now < _bestBeforeDate.Min())
             {
-                Console.WriteLine("Valid");
+                Console.WriteLine(name + " - Valid");
             }
             else
             {
-                Console.WriteLine("Not valid");
+                Console.WriteLine(name + " - Not valid");
             }
             return DateTime.Now < _bestBeforeDate.Min();
         }

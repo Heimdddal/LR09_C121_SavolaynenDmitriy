@@ -29,11 +29,11 @@ namespace LR09_C121_SavolaynenDmitriy
         {
             if (DateTime.Now < bestBeforeDate)
             {
-                Console.WriteLine("Valid");
+                Console.WriteLine(name + " - Valid");
             }
             else
             {
-                Console.WriteLine("Not valid");
+                Console.WriteLine(name + " - Not valid");
             }
             return DateTime.Now < bestBeforeDate;
         }
