@@ -22,7 +22,20 @@ namespace LR09_C121_SavolaynenDmitriy
             Console.WriteLine($"Price: {price}");
             Console.WriteLine($"Quantity: {_quantity}");
             Console.WriteLine($"Production Date: {dateOfManufacting.ToShortDateString()}");
-            Console.WriteLine($"Expiration Date: {bestBeforeDate.ToShortDateString()}");
+            Console.WriteLine($"Expiration Date: {bestBeforeDate.ToShortDateString()}\n");
+        }
+
+        public override bool IsBest()
+        {
+            if (DateTime.Now < bestBeforeDate)
+            {
+                Console.WriteLine("Valid");
+            }
+            else
+            {
+                Console.WriteLine("Not valid");
+            }
+            return DateTime.Now < bestBeforeDate;
         }
     }
 }

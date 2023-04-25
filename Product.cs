@@ -30,8 +30,16 @@ namespace LR09_C121_SavolaynenDmitriy
 
         public abstract void PrintInfo();
 
-        public bool IsBest()
+        public virtual bool IsBest()
         {
+            if (DateTime.Now < bestBeforeDate)
+            {
+                Console.WriteLine("Valid");
+            }
+            else
+            {
+                Console.WriteLine("Not valid");
+            }
             return DateTime.Now < bestBeforeDate;
         }
 
